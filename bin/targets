@@ -1,0 +1,7 @@
+#!/bin/bash 
+
+find -L data/ \
+	-name '*.vcf' \
+| sed \
+	-e 's#data/#results/bgzip_mk/#' \
+	-e 's#\.vcf$#.vcf.gz#' \
